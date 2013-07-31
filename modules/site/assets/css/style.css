@@ -1,0 +1,486 @@
+/*
+Trabalho de Aplica��es Web - 2012 
+-> Imob - Venda de Im�veis
+
+*/
+body{
+    padding: 0;
+    margin: 0;
+    font: 12px/1.5em Arial, Helvetica, sans-serif;
+    color: #6f6e6e;
+}
+a{
+    text-decoration: none;
+    color: #5298D2;
+}
+.wrapper{
+    width: 960px;
+    margin: 0 auto;
+}
+h1{
+    font-size: 25px;
+    margin: 0 0 25px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+h3{
+    font-size: 18px;
+}
+
+/**********************************************************
+                        HEADER
+**********************************************************/
+#header{
+    border-bottom: 3px solid #999999;
+    padding-top: 50px;
+    overflow: hidden;
+}
+#header .logo{
+    width: 35%;
+    float: left;
+    height: 80px;
+}
+#header .nav{
+    width: 65%;
+    float: left;
+    height: 80px;
+}
+#header .nav ul{
+    float: right;
+    margin-top: 45px;
+}
+#header .nav ul li{
+    float: left;
+    padding: 0 15px;
+}
+#header .nav ul li:last-child{
+    padding-right: 0;
+}
+#header .nav ul li a{
+    font-size: 16px;
+}
+#header .nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/**********************************************************
+                        MAIN
+**********************************************************/
+#main{
+    width: 100%;
+    overflow: hidden;
+    min-height: 300px;
+    margin-top: 25px;
+}
+
+/* IMOVEIS-DESTAQUE */
+#main #imoveis-destaque{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#main #imoveis-destaque .loading{
+    background: #999 url(../imgs/loading.gif) 50% 50% no-repeat;
+}
+#main #imoveis-destaque .info-imovel{
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    height: 250px;
+}
+#main #imoveis-destaque .info-imovel .dados-imovel{
+    width: 35%;
+    background: #999;
+    height: 250px;
+    float: left;
+    
+}
+#main #imoveis-destaque .info-imovel .dados-imovel h3{
+    font-size: 20px;
+    margin: 10px;
+}
+#main #imoveis-destaque .info-imovel .dados-imovel table{
+    border-collapse: collapse;
+    margin: 10px;
+    width: 92%;
+}
+#main #imoveis-destaque .info-imovel .dados-imovel table tr{
+    border-bottom: 1px solid #ccc;
+}
+#main #imoveis-destaque .info-imovel .dados-imovel table tr td{
+    width: 50%;
+    padding-top: 15px;
+}
+#main #imoveis-destaque .info-imovel .dados-imovel table tr td.right{
+    text-align: right;
+    font-weight: bold;
+}
+
+#main #imoveis-destaque .info-imovel .imagem-imovel{
+    float: left;
+    width: 65%;
+    height: 250px;
+    background: #999;
+}
+#main #imoveis-destaque .info-imovel .preco-imovel{
+    margin: 25px 15px;
+    overflow: hidden;
+}
+#main #imoveis-destaque .info-imovel .preco-imovel span{
+    font-size: 30px;
+    margin-top: 5px;
+    font-weight: bold;
+    display: block;
+    float: left;
+    width: 50%;
+}
+#main #imoveis-destaque .info-imovel .preco-imovel a{
+    float: right;
+}
+#main #imoveis-destaque .slide-imoveis{
+    width: 100%;
+    padding-top: 10px;
+}
+#main #imoveis-destaque .slide-imoveis ul{
+    width: 100%;
+    border-top: 3px solid #999999;
+    height: auto;
+}
+#main #imoveis-destaque .slide-imoveis ul li{
+    float: left;
+    margin: 0 18px 0 0;
+}
+#main #imoveis-destaque .slide-imoveis ul li a{
+    padding-top: 20px;
+    display: block;
+}
+#main #imoveis-destaque .slide-imoveis ul li.active a{
+    padding-top: 20px;
+    background: url('../imgs/nav-arrow.png') no-repeat top center;
+    display: block;
+}
+#main #imoveis-destaque .slide-imoveis ul li.active img{
+    border: 4px solid #EDEDED;
+    opacity: 1;
+    box-shadow: 0 0 1px 1px silver;
+    -moz-box-shadow: 0 0 1px 1px #C0C0C0;
+    -webkit-box-shadow: 0 0 1px 1px silver;
+}
+#main #imoveis-destaque .slide-imoveis ul li:last-child{
+    margin-right: 0;
+}
+#main #imoveis-destaque .slide-imoveis ul li img{
+    border: 4px solid #C1C1C1;
+    opacity: 0.7;
+    width: 113px;
+    height: 75px;
+}
+
+/* CONTENT-MAIN */
+#main .content-main{
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+#main .content-main .content{
+    width: 70%;
+    float: left;
+    min-height: 250px;
+}
+#main .content-main .text h1{
+    width: 97%;
+}
+#main .content-main .text p{
+    margin-right: 15px;
+}
+#main .content-main .sidebar{
+    width: 30%;
+    float: left;
+    background: #D3DDDE;
+    min-height: 250px;
+}
+#main .content-main .sidebar .header-sidebar{
+    height: 55px;
+    border-bottom: 1px solid #b2b2b2;
+    margin: 0 10px;
+}
+#main .content-main .sidebar .header-sidebar h3{
+    padding-top: 15px;
+    color: #333;
+}
+#main .content-main .sidebar .header-sidebar span{
+    color: #999;
+}
+#main .content-main .sidebar .search{
+    padding-left: 60px;
+    background: url(../imgs/search.png) 5px 5px no-repeat;
+}
+
+/* BUTTONS */
+.btn {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
+    background-color: #019AD2;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear,left top,left bottom,from(#33BCEF),to(#019AD2));
+    background-image: -moz-linear-gradient(#33BCEF,#019AD2);
+    background-image: -ms-linear-gradient(#33BCEF,#019AD2);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#33BCEF),color-stop(100%,#019AD2));
+    background-image: -webkit-linear-gradient(#33BCEF,#019AD2);
+    background-image: -o-linear-gradient(#33BCEF,#019AD2);
+    background-image: linear-gradient(#33BCEF,#019AD2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33bcef',endColorstr='#019ad2',GradientType=0);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #057ED0;
+}
+.btn:active{
+    background-image: -khtml-gradient(linear,left top,left bottom,from(#019AD2),to(#33BCEF));
+    background-image: -moz-linear-gradient(#019AD2,#33BCEF);
+    background-image: -ms-linear-gradient(#019AD2,#33BCEF);
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#019AD2),color-stop(100%,#33BCEF));
+    background-image: -webkit-linear-gradient(#019AD2,#33BCEF);
+    background-image: -o-linear-gradient(#019AD2,#33BCEF);
+    background-image: linear-gradient(#019AD2,#33BCEF);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#019AD2',endColorstr='#33BCEF',GradientType=0);
+}
+.btn:hover{
+    -webkit-box-shadow:inset 0 2px 4px rgba(0,0,0,.1),0 1px 0 rgba(255,255,255,.5);
+    -moz-box-shadow:inset 0 2px 4px rgba(0,0,0,.1),0 1px 0 rgba(255,255,255,.5);
+    box-shadow:inset 0 2px 4px rgba(0,0,0,.1),0 1px 0 rgba(255,255,255,.5);
+}
+
+/* FORMS */
+.form{
+    
+}
+.form-sidebar{
+    margin: 15px 10px;
+    color: #333;
+}
+.form input[type="text"],.form select,.form textarea{
+    border:none;
+    background: #fff;
+    padding: 4px;
+}
+.form .input-form{
+    margin: 10px 0;
+}
+.form .input-form label{
+    width: 100%;
+    display: block;
+    margin-bottom: 4px;
+}
+.form .input-form label span{
+    font-size: 10px;
+    color: #999;
+}
+.form .in1{width: 98%;}
+.form .in2{width: 90%;margin: 0 5px;}
+.form .in5{width: 50%;}
+.form .left{float:left;}
+.form .right{float:right;}
+
+/* LISTA DE IMOVEIS */
+.lista-imoveis{
+    width: 100%;
+    overflow: hidden;
+}
+.lista-imoveis .imovel-lista:first-child{margin-top: 0;}
+.lista-imoveis .imovel-lista{
+    width: 97%;
+    height: 120px;
+    background: #eee;
+    margin: 15px 0;
+}
+.lista-imoveis .imovel-lista img{
+    float: left;
+    margin: 10px;
+    width: 130px;
+    height: 90px;
+    border: 4px solid #EDEDED;
+    box-shadow: 0 0 1px 1px silver;
+    -moz-box-shadow: 0 0 1px 1px #C0C0C0;
+    -webkit-box-shadow: 0 0 1px 1px silver;
+}
+.lista-imoveis .imovel-lista .detalhes{
+    float: left;
+    margin:10px 20px;
+    overflow: hidden;
+    width: 50%;
+}
+.lista-imoveis .imovel-lista .detalhes h3{
+    margin-bottom: 10px;
+}
+.lista-imoveis .imovel-lista .detalhes span.preco{
+    font-size: 20px;
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.lista-imoveis .imovel-lista .link{
+    width: 14%;
+    float: right;
+    padding-top: 70px;
+}
+.pagination{
+    height: 50px;
+    float: right;
+    padding: 0 20px;
+}
+.pagination span{
+    float: left;
+    margin: 0 20px;
+}
+.pagination ul{
+    float: left;
+}
+.pagination ul li{
+    float: left;
+    margin: 0 5px;
+}
+.pagination ul li a{}
+
+
+/* IMOVEL */
+.imovel{
+    width: 97%;
+    overflow: hidden;
+}
+.imovel .imagem-imovel{
+    width: 100%;
+    overflow: hidden;
+    padding: 5px 0;
+}
+.imovel .imagem-imovel img{
+    border: 4px solid #EDEDED;
+    box-shadow: 0 0 1px 1px silver;
+    -moz-box-shadow: 0 0 1px 1px #C0C0C0;
+    -webkit-box-shadow: 0 0 1px 1px silver;
+    margin: 0 2px;
+    width: 640px;
+    height: 250px;
+}
+.imovel .info-imovel{
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.imovel .info-imovel .dados-imovel{
+    width: 50%;
+    float: left;
+    min-height: 160px;
+}
+.imovel .info-imovel .dados-imovel p{
+    margin-bottom: 5px;
+    text-align: right;
+}
+.imovel .info-imovel .dados-imovel p b{
+    text-transform: uppercase;
+    float: left;
+}
+.imovel .info-imovel .descricao-imovel{
+    width: 50%;
+    float: left;
+    min-height: 160px;
+    border-left: 1px solid #ccc;
+}
+.imovel .info-imovel .descricao-imovel h3,.imovel .info-imovel .descricao-imovel p{
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.imovel .fotos-imovel{
+    width: 100%;
+    min-height: 80px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.imovel .fotos-imovel ul{
+    margin-top: 10px;
+    overflow: hidden;
+}
+.imovel .fotos-imovel ul li{
+    float: left;
+    margin: 5px;
+    position: relative;
+}
+.imovel .fotos-imovel ul li span.pover{
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 110px;
+    height: 75px;
+    background: black url('../imgs/zoom.png') no-repeat 50% 50%;
+}
+.imovel .fotos-imovel ul li img{
+    width: 110px;
+    height: 75px;
+    border: 4px solid #EDEDED;
+    box-shadow: 0 0 1px 1px silver;
+    -moz-box-shadow: 0 0 1px 1px #C0C0C0;
+    -webkit-box-shadow: 0 0 1px 1px silver;
+}
+.imovel .localizacao-imovel{
+    width: 100%;
+    min-height: 80px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.imovel .localizacao-imovel #map{
+    border: 4px solid #EDEDED;
+    box-shadow: 0 0 1px 1px silver;
+    -moz-box-shadow: 0 0 1px 1px #C0C0C0;
+    -webkit-box-shadow: 0 0 1px 1px silver;
+    margin: 20px 5px;
+    width: 96%;
+    height: 300px;
+}
+
+/**********************************************************
+                        FOOTER
+**********************************************************/
+#footer{
+    height: 50px;
+    border-top: 3px solid #999999;
+    padding-top: 10px;
+}
+#footer .copyright{
+    float: left;
+    width: 60%;
+}
+#footer .copyright p{
+    color: #999999;
+}
+#footer .links{
+    float: left;
+    width: 40%;
+}
+#footer .links ul{
+    float: right;
+}
+#footer .links ul li{
+    float: left;
+    padding: 0 10px;
+}
+#footer .links ul li:last-child{
+    padding-right: 0;
+}
+#footer .links ul li a{
+    text-decoration: underline;
+}
+#footer .links ul li a:hover{
+    text-decoration: none;
+}
